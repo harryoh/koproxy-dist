@@ -12,6 +12,7 @@ Main application routes
   path = require('path');
 
   module.exports = function(app) {
+    app.use('/proxy', require('./api/proxy'));
     app.use('/api/things', require('./api/thing'));
     return app.route('/*').get(errors[404]);
   };
