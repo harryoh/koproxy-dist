@@ -29,8 +29,7 @@
     return request({
       'method': 'GET',
       'url': requestUrl,
-      'jar': jar,
-      'proxy': 'http://112.150.156.223:3128'
+      'jar': jar
     }).on('error', function(err) {
       return handleError(res, err);
     }).pipe(res);
